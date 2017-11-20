@@ -1,118 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Polaroid Trivia!</title>
-		<!-- Bootstrap is used to make game look nicer -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<!-- local stylesheet -->
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<!-- google fonts link goes here -->
-	</head>
-	<body>
-		<!-- game title -->
-	<header><h1><center>Polaroid Trivia</center></h1></header>
-	<div id="main">
-		
-		<!-- content box -->
-		<article><center>
-			<!-- start button or image -->
-				<!-- ONCLICK: button/image is hidden; game content, timer appears -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- JQUERY -->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous">
+    </script>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  
+  <!-- this is a container to put everything in -->
+  <div class="container">
+    <body>
+      <!-- this is the game header -->
+      <div class="jumbotron"><h1>Polaroid Trivia</h1></div>
+      
+      <!-- this is the start image and the start button -->
+      
+      <div id="imgContainer" align="center">
+        <div class="flex-row" id="flexRowStyle">
+          <img height="100%" src="https://uncrate.com/p/2010/06/polaroid-sx-70.jpg" alt="">
+        </div>
+        <div class="flex-row" id="flexRowStyle">
+          <button id="getStarted">Get Started</button>
+        </div>
+      </div>
+      <!-- this is a container for the trivia questions -->
+      <div id="questionContainer" align="center">
+       
 
-			<!-- countdown timer -->
-			<h3><span id="countdown">60</span> seconds remaining</h3>
-			<br>
-
-			<!-- there are 5 trivia questions inside this fold-->
-			<!-- each question has a list of buttons with answers -->
-			<!-- you can only choose one answer per question -->
-			
-				<h2>1. Who founded the Polaroid Corporation?</h2>
-				<label class="radio-inline">
-					<input type="radio" name="survey" id="Radios1" value="Yes">
-					Edwin Land
-				</label>
-				<label class="radio-inline">
-					<input type="radio" name="survey" id="Radios2" value="No">
-					George Eastman
-				</label>
-				<label class="radio-inline">
-					<input type="radio" name="survey" id="Radios3" value="Notsure">
-					Ernst Leitz Sr.
-				</label>
-				<h2>2. What technology did Polaroid pioneer?</h2>
-				<label class="radio-inline">
-					<input type="radio" name="survey" id="Radios1" value="Yes">
-					Color film
-				</label>
-				<label class="radio-inline">
-					<input type="radio" name="survey" id="Radios2" value="No">
-					Digital cameras
-				</label>
-				<label class="radio-inline">
-					<input type="radio" name="survey" id="Radios3" value="Notsure">
-					Self-developing photography
-				</label>
-				<h2>3. What year did Polaroid start selling cameras?</h2>
-				<label class="radio-inline">
-					<input type="radio" name="survey" id="Radios1" value="Yes">
-					1947
-				</label>
-				<label class="radio-inline">
-					<input type="radio" name="survey" id="Radios2" value="No">
-					1957
-				</label>
-				<label class="radio-inline">
-					<input type="radio" name="survey" id="Radios3" value="Notsure">
-					1977
-				</label>
-				<h2>4. What year did the Polaroid SX-70 debut?</h2>
-				<label class="radio-inline">
-					<input type="radio" name="survey" id="Radios1" value="Yes">
-					1971
-				</label>
-				<label class="radio-inline">
-					<input type="radio" name="survey" id="Radios2" value="No">
-					1972
-				</label>
-				<label class="radio-inline">
-					<input type="radio" name="survey" id="Radios3" value="Notsure">
-					1976
-				</label>
-				<h2>5. "Polaroid means..."</h2>
-				<label class="radio-inline">
-					<input type="radio" name="survey" id="Radios1" value="Yes">
-					<!-- this is an easter egg -->
-					<a href="https://www.youtube.com/watch?v=RwwiWr4csfA" target="_blank">Fun</a>
-				</label>
-				<label class="radio-inline">
-					<input type="radio" name="survey" id="Radios2" value="No">
-					Hipsters
-				</label>
-				<label class="radio-inline">
-					<input type="radio" name="survey" id="Radios3" value="Notsure">
-					Nostalgia
-				</label>
-
-				<!-- user clicks done after answering questions -->
-				<!-- new page appears -->
-				<!-- computer displays results -->
-				<!-- number of correct answers -->
-				<!-- number of incorrect answers -->
-				<!-- number of questions unanswered -->
-				<!-- styling for nav and aside columns, plus footer, inside this fold -->
-				</center>
-			</article>
-		<nav><img src="http://wp.fyb.umd.edu/2014/wp-content/uploads/sites/8/2014/08/rainbow.jpg" width="100%"></nav>
-	<aside><img src="http://wp.fyb.umd.edu/2014/wp-content/uploads/sites/8/2014/08/rainbow.jpg" width="100%"></aside>
-</div>
-
-<footer>
-	<!-- done button -->
-	<button type="button" class="btn-xlarge" style="display: block; margin: 0 auto;">I'm done!</button>
-</footer>
-<!-- game does not reset -->
-<!-- Link to the javascript file. -->
-<script src="assets/javascript/logic.js"></script>
-</body>
+        <!-- this is where the timer should go-->
+        <div class="flex-row" id="flexRowStyle">
+          <div id="countdownTimer">
+            <h3><span id="countdown">60</span> seconds remaining</h3>
+          </div>
+        </div>
+        <!-- this is a container for the questions -->
+        <div class="flex-row" id="flexRowStyle">
+          <!-- this is the first trivia question -->
+          <div id="q1" class="question">
+            <h2>1. Who founded the Polaroid Corporation?</h2>
+            <label class="radio-inline">
+              <input type="radio" name="question1" id="radio1" value="Yes">
+              Edwin Land
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="question1" id="radio2" value="No">
+              George Eastman
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="question1" id="radio3" value="No">
+              Ernst Leitz Sr.
+            </label>
+          </div>
+          <!-- this is the second trivia question -->
+          <div id="q2" class="question">
+            <h2>2. What technology did Polaroid pioneer?</h2>
+            <label class="radio-inline">
+              <input type="radio" name="question2" id="radio4" value="No">
+              Color film
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="question2" id="radio5" value="No">
+              Digital cameras
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="question2" id="radio6" value="Yes">
+              Self-developing photography
+            </label>
+          </div>
+          <h2>3. What year did Polaroid start selling cameras?</h2>
+          <label class="radio-inline">
+            <input type="radio" name="question3" id="radio7" value="Yes">
+            1947
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="question3" id="radio8" value="No">
+            1957
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="question3" id="radio9" value="No">
+            1977
+          </label>
+          <h2>4. What year did the Polaroid SX-70 debut?</h2>
+          <label class="radio-inline">
+            <input type="radio" name="question4" id="radio10" value="Yes">
+            1971
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="question4" id="radio11" value="No">
+            1972
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="question4" id="radio12" value="No">
+            1976
+          </label>
+          <h2>5. "Polaroid means..."</h2>
+          <label class="radio-inline">
+            <input type="radio" name="question5" id="radio13" value="Yes">
+            <!-- this is an easter egg -->
+            <a href="https://www.youtube.com/watch?v=RwwiWr4csfA" target="_blank">Fun</a>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="question5" id="radio14" value="No">
+            Hipsters
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="question5" id="radio15" value="No">
+            Nostalgia
+          </label>
+        </div>
+ 
+          <!-- this is a button to hide the questions and show the game summary page -->
+          <div class="flex-row" id="flexRowStyle">
+            <button id="showScore">How did I do?</button>
+    
+        </div>
+      </div>
+      <!-- gameSummaryContainer goes here -->
+      <div id="gameSummaryContainer" align="center">
+        <!-- this is a tally of the player's right/wrong answers -->
+        <h1>Right answers: <span id="playerRightAnswers"></span></h1>
+        <h1>Wrong answers: <span id="playerWrongAnswers"></span></h1>
+        
+        <!-- this is a reload button -->
+      </div>
+    </div>
+    
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="assets/javascript/logic.js"></script>
+  </body>
 </html>

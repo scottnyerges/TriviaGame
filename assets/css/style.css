@@ -1,124 +1,30 @@
-/* this is CSS for the page design */    
-
-
-
-body {
-        font: 24px Helvetica;
-/*        background: #999999;*/
-    }
-
-    #main {
-        min-height: 500px;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-flow: row;
-    }
- 
-    #main > article {
-        margin: 4px;
-        padding: 5px;
-        border: 1px solid #cccc33;
-        border-radius: 7pt;
-/*        background: #dddd88;*/
-        flex: 3 1 60%;
-        order: 2;
-/*        background-image: url("https://i2.wp.com/www.casualphotophile.com/wp-content/uploads/2017/01/five-best-polaroid-cameras-1-of-7.jpg?ssl=1");
-*/        
-    }
-
-    #main > nav {
-        margin: 4px;
-        padding: 5px;
-/*        border: 1px solid #8888bb;
-        border-radius: 7pt;*/
-/*        background: #ccccff;*/
-        flex: 1 6 20%;
-        order: 1;
-    }
-  
-    #main > aside {
-        margin: 4px;
-        padding: 5px;
-/*        border: 1px solid #8888bb;
-        border-radius: 7pt;*/
-/*        background: #ccccff;
-*/        flex: 1 6 20%;
-        order: 3;
-    }
-
-
-
- 
-    header, footer {
-        display: block;
-        margin: 4px;
-        padding: 5px;
-        min-height: 100px;
-/*        border: 1px solid #eebb55;
-        border-radius: 7pt;*/
-/*        background: #ffeebb;*/
-    }
-
-    h1 {
-        font-size: 100px;
-    }
-
-    h3 {
-        font-size: 50px;
-    }
-
-    a:link {
-    text-decoration: none;
-    }
-
-    a:visited {
-    text-decoration: none;
-    color : #000;
-    }
-
-
-/* this is a button to start the game, disappear, and bring up the questions*/
-
-    .btn-large {
-        https://mint-camera.com/upload/product/large/shop_polaroid-sx70-model1-white_b2(c).jpg
-    }
-
-
-
-/* this is for a jumbo custom button */
-    .btn-xlarge {
-    padding: 18px 28px;
-    font-size: 60px; //change this to your desired size
-    line-height: normal;
-    -webkit-border-radius: 8px;
-       -moz-border-radius: 8px;
-            border-radius: 8px;
+#questionContainer {
+display: none;
 }
-
-
+/* need an ID for the game summary page */
+#gameSummaryContainer {
+display: none;
+}
+#flexRowStyle {
+margin-bottom: 20px;
+}
+/*  easter egg link style */
+a { text-decoration : none; color : #000;
+}
+.jumbotron {
+background-image: url("http://acejet170.typepad.com/photos/uncategorized/polaroidstripes.jpg");
+color: white;
+text-shadow: black 0.3em 0.3em 0.3em;
+}
 #countdown {
-    color: red;
-    font-family: sans-serif;
+color: red;
 }
 
 
-/* this is for a responsive design */
- 
-    /* Too narrow to support three columns */
-    @media all and (max-width: 640px) {
-        #main, #page {
-            flex-direction: column;
-        }
+.col-2 {
+	border-style: solid;
+	border-color: lightgray;
+	color: lightgray;
 
-        #main > article, #main > nav, #main > aside {
-        /* Return them to document order */
-            order: 0;
-        }
-  
-        #main > nav, #main > aside, header, footer {
-            min-height: 50px;
-            max-height: 50px;
-        }
-    }
-    
+
+}
